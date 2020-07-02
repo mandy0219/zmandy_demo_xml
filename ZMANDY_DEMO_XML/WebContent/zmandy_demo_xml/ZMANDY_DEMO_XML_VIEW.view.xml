@@ -1,0 +1,61 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+		controllerName="zmandy_demo_xml.ZMANDY_DEMO_XML_VIEW" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Mandy's Demo">
+		<content>
+	<Table noDataText="No data" id="idTable" items="{path:'/EmployeeSet'}">
+						<items>
+							<ColumnListItem type="Navigation" press="onItemPress">
+								<cells>
+									<Text text="{Empid}"/>
+									<Text text="{Empname}"/>
+									<Text text="{Empaddr}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<columns>
+							<Column id="EmpIdCol">
+								<header>
+									<Label text="Employee ID"/>
+								</header>
+							</Column>
+							<Column id="EmpNameCol">
+								<header>
+									<Label text="Name"/>
+								</header>
+							</Column>
+							<Column id="EmpAddrCol">
+								<header>
+									<Label text="Address"/>
+								</header>
+							</Column>
+						</columns>
+					</Table>
+				</content>
+				<footer>
+					<Bar>
+						<contentRight>
+							<Button icon="sap-icon://create" text="Create" press="onCreate"/>
+							<Button icon="sap-icon://edit" text="Edit" press="onEdit"/>
+							<Button icon="sap-icon://delete" text="Delete" press="onDelete"/>
+						</contentRight>
+					</Bar>
+				</footer>
+	</Page>
+	<Dialog id="employeeDialog" title="Employee CRUD">
+		<f:SimpleForm>
+			<Label text="Employee Id"/>
+			<Input id="EmpId" value="{Empid}"/>
+			<Label text="Name"/>
+			<Input id="EmpName" value="{Empname}"/>
+			<Label text="Address"/>
+			<Input id="EmpAddr" value="{Empaddr}"/>
+		</f:SimpleForm>
+		<Toolbar>
+			<ToolbarSpacer/>
+			<Button id="SaveCreate" text="Save"/>
+			<Button id="SaveEdit" text="Save Edit"/>
+			<Button id="CancelButton" text="Cancel" />
+		</Toolbar>
+	</Dialog>
+
+</core:View>
