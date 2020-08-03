@@ -10,7 +10,7 @@
 		return Controller.extend("zmandy_demo_xml.ZMANDY_DEMO_XML_VIEW", {
 
 			onInit: function() {
-				oModel = new sap.ui.model.odata.ODataModel('https://mcd1809.nttdata-taiwan.com:44310/sap/opu/odata/sap/ZMANDY_DEMO_SRV/',true);
+				oModel = new sap.ui.model.odata.ODataModel('https://你的網址/sap/opu/odata/sap/ZMANDY_DEMO_SRV/',true);
 				this.getView().setModel(oModel);
 			},
 
